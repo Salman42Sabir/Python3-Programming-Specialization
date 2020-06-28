@@ -69,24 +69,80 @@ print(wrd_d)
 
 sally = "sally sells sea shells by the sea shore"
 
+count = 0
+characters = {} 
+
+for char in sally:
+    if char not in characters:
+        characters[char] = count + 1
+    elif char in characters:
+        characters[char] = characters[char] + 1 
+
+best_char = ""
+max_val = 0
+
+for key, value in characters.items():
+    if value > max_val:
+        max_val = value
+        best_char = key
+print(best_char)
 
 # 7. Find the least frequent letter. Create the dictionary characters that shows each character from string sally and its frequency. 
 # Then, find the least frequent letter in the string and assign the letter to the variable worst_char.
 
 sally = "sally sells sea shells by the sea shore and by the road"
+count = 0
+characters = {} 
 
+for char in sally:
+    if char not in characters:
+        characters[char] = count + 1
+    elif char in characters:
+        characters[char] = characters[char] + 1 
+        
+worst_char = ""
+
+min_val = 1
+
+
+for key, value in characters.items():
+    if value != min_val:
+        continue
+    worst_char = key 
+    output = "{} is the least number which appears only {} of times".format(worst_char, str(min_val))
+    print(output)
 
 # 8. Create a dictionary named letter_counts that contains each letter and the number of times it occurs in string1. 
 # Challenge: Letters should not be counted separately as upper-case and lower-case. Intead, all of them should be counted as lower-case.
 
-string1 = "There is a tide in the affairs of men, Which taken at the flood, leads on to fortune. Omitted, all the voyage of their life is 
-bound in shallows and in miseries. On such a full sea are we now afloat. And we must take the current when it serves, or lose our ventures."
+string1 = "There is a tide in the affairs of men, Which taken at the flood, leads on to fortune. Omitted, all the voyage of their life is bound in shallows and in miseries. On such a full sea are we now afloat. And we must take the current when it serves, or lose our ventures."
+letter_counts = {}
+count = 0
+letter_list = string1.lower().split() 
+
+for letter in letter_list:
+    if letter not in letter_counts:
+        letter_counts[letter] = count + 1
+    elif letter in letter_counts:
+        letter_counts[letter] = letter_counts[letter] + 1
+        
+print(letter_counts)
 
 # 9. Create a dictionary called low_d that keeps track of all the characters in the string p and notes how many times each character was seen. 
 # Make sure that there are no repeats of characters as keys, such that “T” and “t” are both seen as a “t” for example.
 
 p = "Summer is a great time to go outside. You have to be careful of the sun though because of the heat."
 
+p_list = p.lower().split()
+low_d = {}
+count = 0
+
+for char in p_list:
+    if char not in low_d:
+        low_d[char] = count + 1
+    elif char in low_d:
+        low_d[char] = low_d[char] + 1
+print(low_d)
 
 
 
