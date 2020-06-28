@@ -33,3 +33,25 @@ sent = "Singing in the rain and playing in the rain are two entirely different s
 sally = "sally sells sea shells by the sea shore"
 
 
+# 7. Find the least frequent letter. Create the dictionary characters that shows each character from string sally and its frequency. 
+# Then, find the least frequent letter in the string and assign the letter to the variable worst_char.
+
+sally = "sally sells sea shells by the sea shore and by the road"
+
+
+# 8. Create a dictionary named letter_counts that contains each letter and the number of times it occurs in string1. 
+# Challenge: Letters should not be counted separately as upper-case and lower-case. Intead, all of them should be counted as lower-case.
+
+string1 = "There is a tide in the affairs of men, Which taken at the flood, leads on to fortune. Omitted, all the voyage of their life is 
+bound in shallows and in miseries. On such a full sea are we now afloat. And we must take the current when it serves, or lose our ventures."
+
+# 9. Create a dictionary called low_d that keeps track of all the characters in the string p and notes how many times each character was seen. 
+# Make sure that there are no repeats of characters as keys, such that “T” and “t” are both seen as a “t” for example.
+
+p = "Summer is a great time to go outside. You have to be careful of the sun though because of the heat."
+
+
+
+
+
+
