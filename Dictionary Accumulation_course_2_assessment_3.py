@@ -9,22 +9,59 @@ print(credits)
 
 # 2. Create a dictionary, freq, that displays each character in string str1 as the key and its frequency as the value.
 
+freq = {}
 str1 = "peter piper picked a peck of pickled peppers"
+count = 0
+for char in str1:
+    if char not in freq:
+    # if a character isn't in dictionary add it and value to one
+        freq[char] = count + 1
+    # if a character is in dictionary add the previous value to update
+    elif char in freq:
+        freq[char] = freq[char] + 1
+print(freq)
 
 
 
 # 3. Provided is a string saved to the variable name s1. Create a dictionary named counts that contains each letter in s1 and the number of times it occurs.
 
 s1 = "hello"
+counts = {}
+count = 0
+for char in s1:
+    if char not in counts:
+        counts[char] = count + 1
+    elif char in counts:
+        counts[char] = counts[char] + 1
+print(counts)
 
 # 4. Create a dictionary, freq_words, that contains each word in string str1 as the key and its frequency as the value.
 
 str1 = "I wish I wish with all my heart to fly with dragons in a land apart"
 
+freq_words = {}
+count = 0
+for char in str1:
+    if char not in freq_words:
+        freq_words[char] = count + 1
+    elif char in freq_words:
+        freq_words[char] = freq_words[char] + 1
+print(freq_words)
+
 
 # 5. Create a dictionary called wrd_d from the string sent, so that the key is a word and the value is how many times you have seen that word.
 
 sent = "Singing in the rain and playing in the rain are two entirely different situations but both can be good"
+# split into the list
+sent_split = sent.split() 
+wrd_d = {}
+count = 0
+for word in sent_split:
+    if word not in wrd_d:
+        wrd_d[word] = count + 1
+    elif word in wrd_d:
+        wrd_d[word] = wrd_d[word] + 1
+print(wrd_d)
 
 
 # 6. Create the dictionary characters that shows each character from the string sally and its frequency. Then, find the most frequent letter 
