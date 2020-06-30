@@ -85,3 +85,16 @@ print(sum1 == sum2)
 # list is the string ‘bye’. What is returned is a list that contains up to the first 10 strings, regardless of where the loop stops. 
 # (i.e., if it stops on the 32nd element, the first 10 are returned. If “bye” is the 5th element, the first 4 are returned.) 
 # If you want to make this even more of a challenge, do this without slicing
+
+def beginning(inputList):
+    outputList = []
+    indexNum = 0
+    while indexNum < len(inputList):
+        if inputList[indexNum] != "bye":
+            outputList.append(inputList[indexNum])
+            indexNum += 1
+        else:
+            break
+    return outputList
+lst = ["SALMAN", "IS", "FROM", "PAKISTAN", "STOP","bye", "HE", "IS", "GOOD", "MAN"]
+print(beginning(lst))
