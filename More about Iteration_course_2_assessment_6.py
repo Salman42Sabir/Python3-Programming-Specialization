@@ -53,7 +53,18 @@ print(sublist(lst))
 # 4. Write a function called stop_at_z that iterates through a list of strings. Using a while loop, append each string to a new list 
 # until the string that appears is “z”. The function should return the new list.
 
-
+def stop_at_z(inputList):
+    outputList = []
+    indexNum = 0
+    while indexNum < len(inputList):
+        if inputList[indexNum] != "z":
+            outputList.append(inputList[indexNum])
+            indexNum += 1
+        else:
+            break
+    return outputList
+lst = ["a", "b", "c", "d", "w", "z", "k", "l", "m", "n"]
+print(stop_at_z(lst))
 
 # 5. Below is a for loop that works. Underneath the for loop, rewrite the problem so that it does the same thing, but using a while 
 # loop instead of a for loop. Assign the accumulated total in the while loop code to the variable sum2. Once complete, sum2 should equal sum1.
