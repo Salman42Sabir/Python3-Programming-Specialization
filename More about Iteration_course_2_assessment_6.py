@@ -18,6 +18,19 @@ print(sublist(lst))
 # 2. Write a function called check_nums that takes a list as its parameter, and contains a while loop that only stops once 
 # the element of the list is the number 7. What is returned is a list of all of the numbers up until it reaches 7.
 
+def check_nums(inputList):
+    outputList = []
+    indexNum = 0
+    while indexNum < len(inputList):
+        if inputList[indexNum] != 7:
+            outputList.append(inputList[indexNum])
+            indexNum += 1
+        else:
+            break
+    return outputList
+lst = [1,2,3,4,5,6,7,8,9]
+print(check_nums(lst))
+
 
 
 # 3. Write a function, sublist, that takes in a list of strings as the parameter. In the function, use a while loop to return 
