@@ -69,7 +69,17 @@ print(stop_at_z(lst))
 # 5. Below is a for loop that works. Underneath the for loop, rewrite the problem so that it does the same thing, but using a while 
 # loop instead of a for loop. Assign the accumulated total in the while loop code to the variable sum2. Once complete, sum2 should equal sum1.
 
+sum1 = 0
+sum2 = 0
+index_num = 0
+lst = [65, 78, 21, 33]
 
+for x in lst:
+    sum1 = sum1 + x
+while index_num < len(lst):
+    sum2 = sum2 + lst[index_num]
+    index_num += 1
+print(sum1 == sum2)
 
 # 6. Challenge: Write a function called beginning that takes a list as input and contains a while loop that only stops once the element of the 
 # list is the string ‘bye’. What is returned is a list that contains up to the first 10 strings, regardless of where the loop stops. 
