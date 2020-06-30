@@ -23,13 +23,12 @@ def change(val):
 change(user_input)
 
 # 4. Write a function, accum, that takes a list of integers as input and returns the sum of those integers.
-intList = []
+intList = [1,2,3,5,15,62]
 def accum (numList):
-    rangeNum = int(input("Enter number of elements : "))
-    for iterVar in range(rangeNum): 
-        numInt = int(input("Enter a number")) 
-        numList.append(numInt) 
-    return sum(numList)
+    sumInt = 0
+    for num in numList:
+        sumInt = sumInt + num
+    return sumInt
 accum(intList)
 
 
