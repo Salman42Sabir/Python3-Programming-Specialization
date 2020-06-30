@@ -10,3 +10,29 @@ country = []
 for item in tuples_lst:
     country.append(item[1])
 print(country)
+
+# 3. With only one line of code, assign the variables city, country, and year to the values of the tuple olymp.
+
+olymp = ('Rio', 'Brazil', 2016)
+city, country, year = olymp[0], olymp[1], olymp[2]
+print(city)
+print(country)
+print(year)
+
+# 4. Define a function called info with five parameters: name, gender, age, bday_month, and hometown. The function should then return a tuple 
+# with all five parameters in that order.
+
+def info(name, gender, age, bday_month, hometown):
+    _tuple = name, gender, age, bday_month, hometown
+    return _tuple
+info("Salman", "Male", 24, "Novemeber", "Pakistan")
+
+# 5. Given is the dictionary, gold, which shows the country and the number of gold medals they have earned so far in the 2016 Olympics. 
+# Create a list, num_medals, that contains only the number of medals for each country. You must use the .items() method. 
+# Note: The .items() method provides a list of tuples. Do not use .keys() method.
+
+gold = {'USA':31, 'Great Britain':19, 'China':19, 'Germany':13, 'Russia':12, 'Japan':10, 'France':8, 'Italy':8}
+num_medals = []
+for country, medals in gold.items():
+    num_medals.append(medals)
+print(num_medals)
