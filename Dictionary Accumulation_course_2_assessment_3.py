@@ -117,15 +117,14 @@ for key, value in characters.items():
 
 string1 = "There is a tide in the affairs of men, Which taken at the flood, leads on to fortune. Omitted, all the voyage of their life is bound in shallows and in miseries. On such a full sea are we now afloat. And we must take the current when it serves, or lose our ventures."
 letter_counts = {}
-count = 0
-letter_list = string1.lower().split() 
+lowerChar = None
 
-for letter in letter_list:
-    if letter not in letter_counts:
-        letter_counts[letter] = count + 1
-    elif letter in letter_counts:
-        letter_counts[letter] = letter_counts[letter] + 1
-        
+for char in string1:
+    lowerChar = char.lower()
+    if lowerChar not in letter_counts:
+        letter_counts[lowerChar] = 0
+    letter_counts[lowerChar] = letter_counts.get(lowerChar, 0) + 1
+ 
 print(letter_counts)
 
 # 9. Create a dictionary called low_d that keeps track of all the characters in the string p and notes how many times each character was seen. 
@@ -133,15 +132,15 @@ print(letter_counts)
 
 p = "Summer is a great time to go outside. You have to be careful of the sun though because of the heat."
 
-p_list = p.lower().split()
 low_d = {}
-count = 0
+lowerChar = None
 
-for char in p_list:
-    if char not in low_d:
-        low_d[char] = count + 1
-    elif char in low_d:
-        low_d[char] = low_d[char] + 1
+for char in p:
+    lowerChar = char.lower()
+    if lowerChar not in low_d:
+        low_d[lowerChar] = 0
+    low_d[lowerChar] = low_d.get(lowerChar, 0) + 1
+ 
 print(low_d)
 
 
