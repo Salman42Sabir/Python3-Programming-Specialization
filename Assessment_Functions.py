@@ -23,7 +23,14 @@ def change(val):
 change(user_input)
 
 # 4. Write a function, accum, that takes a list of integers as input and returns the sum of those integers.
-
+intList = []
+def accum (numList):
+    rangeNum = int(input("Enter number of elements : "))
+    for iterVar in range(rangeNum): 
+        numInt = int(input("Enter a number")) 
+        numList.append(numInt) 
+    return sum(numList)
+accum(intList)
 
 
 # 5. Write a function, length, that takes in a list as the input. If the length of the list is greater than or equal to 5, return “Longer than 5”. 
