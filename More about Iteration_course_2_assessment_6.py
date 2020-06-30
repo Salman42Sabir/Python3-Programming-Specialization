@@ -2,7 +2,18 @@
 # to return a sublist of the input list. The sublist should contain the same values of the original list up until it 
 # reaches the number 5 (it should not contain the number 5).
 
-
+def sublist(input_list):
+    output_list = []
+    index_num = 0
+    while index_num < len(input_list):
+        if input_list[index_num] != 5:
+            output_list.append(index_num)
+            index_num += 1
+        else:
+            break
+    return output_list
+lst = [1,2,3,4,5,7]
+print(sublist(lst))
 
 # 2. Write a function called check_nums that takes a list as its parameter, and contains a while loop that only stops once 
 # the element of the list is the number 7. What is returned is a list of all of the numbers up until it reaches 7.
