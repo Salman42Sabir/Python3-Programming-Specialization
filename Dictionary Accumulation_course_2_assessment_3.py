@@ -40,12 +40,11 @@ print(counts)
 str1 = "I wish I wish with all my heart to fly with dragons in a land apart"
 
 freq_words = {}
-count = 0
-for char in str1:
+str_list = str1.split()
+for char in str_list:
     if char not in freq_words:
-        freq_words[char] = count + 1
-    elif char in freq_words:
-        freq_words[char] = freq_words[char] + 1
+        freq_words[char] = 0
+    freq_words[char] = freq_words[char] + 1
 print(freq_words)
 
 
