@@ -37,7 +37,18 @@ print(check_nums(lst))
 # a sublist of the input list. The sublist should contain the same values of the original list up until it reaches the string “STOP” 
 # (it should not contain the string “STOP”).
 
-
+def sublist(inputList):
+    outputList = []
+    indexNum = 0
+    while indexNum < len(inputList):
+        if inputList[indexNum] != "STOP":
+            outputList.append(inputList[indexNum])
+            indexNum += 1
+        else:
+            break
+    return outputList
+lst = ["SALMAN", "IS", "FROM", "PAKISTAN", "STOP", "HE", "IS", "GOOD", "MAN"]
+print(sublist(lst))
 
 # 4. Write a function called stop_at_z that iterates through a list of strings. Using a while loop, append each string to a new list 
 # until the string that appears is “z”. The function should return the new list.
